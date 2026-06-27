@@ -1,5 +1,12 @@
-const CACHE = 'sudoku-kids-v1';
-const ASSETS = ['/', '/index.html', '/manifest.json', '/icon-192.svg', '/icon-512.svg'];
+const CACHE = 'sudoku-kids-v2';
+const BASE = '/sudoku-kids';
+const ASSETS = [
+  BASE + '/',
+  BASE + '/index.html',
+  BASE + '/manifest.json',
+  BASE + '/icon-192.svg',
+  BASE + '/icon-512.svg'
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(
@@ -21,6 +28,6 @@ self.addEventListener('fetch', e => {
       const clone = res.clone();
       caches.open(CACHE).then(c => c.put(e.request, clone));
       return res;
-    }))
+    }).catch(() => caches.match(BASE + '/index.html')))
   );
 });
