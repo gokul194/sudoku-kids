@@ -1,26 +1,26 @@
 {
   "name": "Sudoku for Kids",
   "short_name": "Sudoku Kids",
-  "description": "Fun 4×4 and 9×9 Sudoku puzzles for kids — Easy to Expert!",
-  "start_url": "/",
+  "description": "Fun 4x4 and 9x9 Sudoku puzzles for kids — Easy to Expert!",
+  "start_url": "/sudoku-kids/",
+  "scope": "/sudoku-kids/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F0EEFF",
   "theme_color": "#6C63FF",
   "icons": [
     {
-      "src": "icon-192.svg",
+      "src": "/sudoku-kids/icon-192.svg",
       "sizes": "192x192",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512.svg",
+      "src": "/sudoku-kids/icon-512.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["games", "education"],
-  "screenshots": []
+  "categories": ["games", "education"]
 }
